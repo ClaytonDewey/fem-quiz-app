@@ -1,0 +1,20 @@
+@use '../util' as *;
+
+.theme-wrapper {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text-color);
+  background-image: var(--background-image-sm);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+
+  @include breakpoint(medium) {
+    background-image: var(--background-image-md);
+  }
+
+  @include breakpoint(large) {
+    background-image: var(--background-image);
+    background-size: cover;
+  }
+}

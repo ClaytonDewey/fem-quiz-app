@@ -38,6 +38,16 @@
   --light-shadow: rgba(143, 160, 193, 0.14);
   --light-progress: var(--clr-white);
 
+  --background: var(--dark-bg);
+  --background-image: var(--dark-bgi);
+  --background-image-md: var(--dark-bgi-md);
+  --background-image-sm: var(--dark-bgi-sm);
+  --background-card: var(--dark-card);
+  --card-shadow: var(--dark-shadow);
+  --text-color: var(--dark-text);
+  --subtext-color: var(--dark-sub-text);
+  --progress-bar: var(--dark-progress);
+
   // Font-family
   --ff-sans: 'Rubik', Arial, Helvetica, sans-serif;
   --ff-mono: 'Source Code Pro', monospace;
@@ -84,7 +94,7 @@
   }
 }
 
-:root[color-scheme='light'] {
+[data-theme='light'] {
   --background: var(--light-bg);
   --background-image: var(--light-bgi);
   --background-image-md: var(--light-bgi-md);
@@ -96,7 +106,7 @@
   --progress-bar: var(--light-progress);
 }
 
-:root[color-scheme='dark'] {
+[data-theme='dark'] {
   --background: var(--dark-bg);
   --background-image: var(--dark-bgi);
   --background-image-md: var(--dark-bgi-md);

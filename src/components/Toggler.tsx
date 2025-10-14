@@ -18,7 +18,7 @@ const Toggler = () => {
           <div className='ball'></div>
         </label>
       </div>
-      {theme === 'light' ? <Icon name='moon' /> : <Icon name='moon-dark' />}
+      {theme === 'light' ? <Icon name='moon-dark' /> : <Icon name='moon' />}
     </div>
   );
 };
