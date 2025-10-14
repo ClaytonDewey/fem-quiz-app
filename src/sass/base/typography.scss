@@ -1,0 +1,39 @@
+@use '../util' as *;
+
+// Typescale = 1.250 - Major Third
+// https://typescale.com/
+h1 {
+  font-weight: 500;
+  line-height: 100%;
+  margin: 0;
+  font-size: rem(40);
+  margin-bottom: rem(16);
+
+  @include breakpoint(medium) {
+    font-size: rem(64);
+  }
+
+  @include breakpoint(large) {
+    margin-bottom: rem(48);
+  }
+
+  span {
+    display: block;
+    font-weight: 300;
+    margin-bottom: rem(8);
+  }
+}
+
+p {
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: 150%;
+
+  @include breakpoint(medium) {
+    font-size: rem(20);
+  }
+}
+
+.italic {
+  font-style: italic;
+}

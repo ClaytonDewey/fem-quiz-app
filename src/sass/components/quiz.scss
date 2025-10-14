@@ -1,0 +1,109 @@
+@use '../util' as *;
+
+.quiz {
+  &__step {
+    margin-bottom: rem(12);
+    color: var(--subtext-color);
+    font-size: rem(14);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  &__question {
+    font-size: rem(20);
+    color: var(--text-color);
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: rem(24);
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: rem(12);
+    height: rem(56);
+    padding: rem(12);
+    font-size: rem(18);
+    font-weight: 500;
+    line-height: 100%;
+    margin-top: rem(12);
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    width: 100%;
+    box-shadow: 0px 16px 40px 0px rgba(143, 160, 193, 0.14);
+    transition: var(--transition);
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--clr-hover);
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__step {
+      margin-bottom: rem(27);
+      font-size: rem(20);
+    }
+
+    &__question {
+      font-size: rem(36);
+      margin-bottom: rem(40);
+    }
+
+    &__btn {
+      height: rem(80);
+      margin-top: rem(32);
+      padding: rem(32);
+      border-radius: rem(24);
+      font-size: rem(28);
+    }
+  }
+
+  @include breakpoint(large) {
+    &__question {
+      font-size: rem(36);
+    }
+
+    &__btn {
+      height: rem(92);
+      margin-top: rem(32);
+      padding: rem(32);
+      border-radius: rem(24);
+      font-size: rem(28);
+    }
+  }
+}
+
+.msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: rem(12) 0;
+  gap: rem(8);
+  font-size: rem(18);
+  font-weight: 400;
+  line-height: 100%;
+
+  img {
+    height: rem(32);
+    width: rem(32);
+  }
+
+  &--error {
+    color: var(--clr-fail);
+  }
+
+  @include breakpoint(medium) {
+    margin: rem(32) 0;
+    font-size: rem(24);
+
+    img {
+      height: rem(40);
+      width: rem(40);
+    }
+  }
+}

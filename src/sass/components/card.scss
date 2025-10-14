@@ -1,0 +1,222 @@
+@use '../util' as *;
+
+.card {
+  &--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .card:not(:last-child) {
+      margin-bottom: rem(12);
+
+      @include breakpoint(medium) {
+        margin-bottom: rem(24);
+      }
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: rem(16);
+  width: 100%;
+  margin: 0;
+  padding: rem(9);
+  height: rem(64);
+  background-color: var(--background-card);
+  color: var(--text-color);
+  border: 3px solid transparent;
+  border-radius: rem(12);
+  box-shadow: 0px 16px 40px 0px var(--card-shadow);
+  text-decoration: none;
+  line-height: 100%;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: var(--card-icon-bg);
+    color: var(--card-icon-text);
+    font-size: rem(18);
+    font-weight: 500;
+    text-transform: capitalize;
+    height: rem(40);
+    width: rem(40);
+    border-radius: rem(6);
+
+    img {
+      display: block;
+      height: rem(28.571);
+      width: rem(28.571);
+    }
+
+    &--success {
+      height: rem(32);
+      width: rem(32);
+      margin-left: auto;
+    }
+
+    &--fail {
+      height: rem(32);
+      width: rem(32);
+      margin-left: auto;
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: 100%;
+  }
+
+  &--selected {
+    border-color: var(--clr-primary);
+
+    .card__icon {
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
+    }
+
+    &:hover {
+      .card__icon {
+        background-color: var(--clr-primary) !important;
+        color: var(--clr-white) !important;
+      }
+    }
+  }
+
+  &--success {
+    border-color: var(--clr-success);
+
+    .card__icon {
+      background-color: var(--clr-success);
+      color: var(--clr-white);
+    }
+
+    &:hover {
+      .card__icon {
+        background-color: var(--clr-success) !important;
+        color: var(--clr-white) !important;
+      }
+    }
+  }
+
+  &--fail {
+    border-color: var(--clr-fail);
+
+    .card__icon {
+      background-color: var(--clr-fail) !important;
+      color: var(--clr-white) !important;
+    }
+
+    &:hover {
+      .card__icon {
+        background-color: var(--clr-fail);
+        color: var(--clr-white);
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    border-radius: rem(24);
+    height: rem(80);
+    gap: rem(32);
+
+    &__icon {
+      height: rem(56);
+      width: rem(56);
+      border-radius: rem(12);
+      font-size: rem(28);
+
+      img {
+        height: rem(40);
+        width: rem(40);
+      }
+
+      &--success {
+        height: rem(40);
+        width: rem(40);
+        margin-left: auto;
+      }
+
+      &--fail {
+        height: rem(40);
+        width: rem(40);
+        margin-left: auto;
+      }
+    }
+
+    &__text {
+      font-size: rem(28);
+    }
+  }
+
+  @include breakpoint(large) {
+    padding: rem(20);
+    height: rem(92);
+    max-width: rem(524);
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .card__icon {
+      color: var(--clr-primary);
+      transition: var(--transition);
+      background-color: var(--icon-bg);
+    }
+  }
+
+  &__results {
+    height: auto;
+    padding: rem(32);
+    gap: rem(16);
+    flex-direction: column;
+
+    &--header {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: rem(18);
+      gap: rem(16);
+
+      .card__icon {
+        background-color: #f6e7ff;
+      }
+    }
+
+    &--body {
+      text-align: center;
+      h2 {
+        font-weight: 500;
+        font-size: rem(88);
+        line-height: 100%;
+        margin-bottom: rem(16);
+      }
+
+      p {
+        font-size: rem(18);
+        line-height: 100%;
+        color: var(--subtext-color);
+      }
+    }
+
+    @include breakpoint(medium) {
+      padding: rem(48);
+      gap: rem(64);
+
+      &--header {
+        font-size: rem(28);
+        gap: rem(24);
+      }
+
+      h2 {
+        font-size: rem(144);
+      }
+
+      p {
+        font-size: rem(24);
+      }
+    }
+  }
+}

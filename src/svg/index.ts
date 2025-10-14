@@ -1,0 +1,11 @@
+export { default as IconA11y } from './accessibility';
+export { default as IconCorrect } from './correct';
+export { default as IconCSS } from './css';
+export { default as IconError } from './error';
+export { default as IconHtml } from './html';
+export { default as Icon } from './icon';
+export { default as IconJS } from './js';
+export { default as IconMoonDark } from './moon-dark';
+export { default as IconMoon } from './moon';
+export { default as IconSunDark } from './sun-dark';
+export { default as IconSun } from './sun';

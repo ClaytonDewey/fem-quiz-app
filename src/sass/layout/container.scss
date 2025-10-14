@@ -1,0 +1,42 @@
+@use '../util' as *;
+
+.container {
+  margin: 0 auto;
+  padding: rem(32) rem(24);
+  width: 100%;
+
+  @include breakpoint(medium) {
+    max-width: rem(1160);
+    padding: 0 rem(64) rem(64);
+  }
+
+  @include breakpoint(large) {
+    padding: 0;
+  }
+}
+
+.col {
+  &__left {
+    margin-bottom: rem(40);
+  }
+
+  &__right {
+    width: 100%;
+  }
+
+  @include breakpoint(medium) {
+    &__left {
+      margin-bottom: rem(64);
+    }
+  }
+
+  @include breakpoint(large) {
+    &__left {
+      width: rem(465);
+    }
+
+    &__right {
+      width: rem(524);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@use '../util' as *;
+
+.progress {
+  &__border {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--progress-bar);
+    border-radius: rem(50);
+    height: rem(16);
+    padding: rem(4);
+    width: 100%;
+  }
+
+  &__bar {
+    display: block;
+    background-color: var(--clr-primary);
+    border-radius: rem(50);
+    height: rem(8);
+  }
+}

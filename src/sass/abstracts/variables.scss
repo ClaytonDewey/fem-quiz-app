@@ -1,0 +1,109 @@
+@use '../util' as *;
+
+:root {
+  // Colors
+  --clr-primary: hsl(277, 91%, 56%);
+  --clr-success: hsl(151, 70%, 50%);
+  --clr-fail: hsl(0, 82%, 63%);
+  --clr-grey-400: hsl(216, 25%, 25%);
+  --clr-grey-300: hsl(215, 27%, 32%);
+  --clr-grey-200: hsl(219, 13%, 44%);
+  --clr-grey-100: hsl(220, 38%, 97%);
+  --clr-light-blue: hsl(216, 47%, 78%);
+  --clr-black: #000;
+  --clr-white: #fff;
+  --card-icon-bg: var(--clr-grey-100);
+  --card-icon-text: var(--clr-grey-200);
+  --icon-bg: hsl(278, 100%, 95%);
+  --clr-hover: hsl(280, 84%, 77%);
+
+  // Color Schemes
+  --dark-bg: var(--clr-grey-400);
+  --dark-bgi: url(../../images/pattern-background-desktop-dark.svg);
+  --dark-bgi-md: url(../../images/pattern-background-tablet-dark.svg);
+  --dark-bgi-sm: url(../../images/pattern-background-mobile-dark.svg);
+  --dark-card: var(--clr-grey-300);
+  --dark-text: var(--clr-white);
+  --dark-sub-text: var(--clr-light-blue);
+  --dark-shadow: rgba(49, 62, 81, 0.14);
+  --dark-progress: var(--clr-grey-300);
+
+  --light-bg: var(--clr-grey-100);
+  --light-bgi: url(../../images/pattern-background-desktop-light.svg);
+  --light-bgi-md: url(../../images/pattern-background-tablet-light.svg);
+  --light-bgi-sm: url(../../images/pattern-background-mobile-light.svg);
+  --light-card: var(--clr-white);
+  --light-text: var(--clr-grey-300);
+  --light-sub-text: var(--clr-grey-200);
+  --light-shadow: rgba(143, 160, 193, 0.14);
+  --light-progress: var(--clr-white);
+
+  // Font-family
+  --ff-sans: 'Rubik', Arial, Helvetica, sans-serif;
+  --ff-mono: 'Source Code Pro', monospace;
+  --ff-serif: Cambria, Cochin, Georgia, serif;
+
+  // Font-sizes
+  --fs-heading-lg: #{rem(64)};
+  --fs-heading-md: #{rem(36)};
+  --fs-heading-sm: #{rem(28)};
+  --fs-body: #{rem(12)};
+
+  // Flexbox gap/columns
+  --gap: #{rem(24)};
+  --columns: 2;
+
+  --transition: all 0.25s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-bg);
+    --background-image: var(--dark-bgi);
+    --background-image-md: var(--dark-bgi-md);
+    --background-image-sm: var(--dark-bgi-sm);
+    --background-card: var(--dark-card);
+    --card-shadow: var(--dark-shadow);
+    --text-color: var(--dark-text);
+    --subtext-color: var(--dark-sub-text);
+    --progress-bar: var(--dark-progress);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light-bg);
+    --background-image: var(--light-bgi);
+    --background-image-md: var(--light-bgi-md);
+    --background-image-sm: var(--light-bgi-sm);
+    --background-card: var(--light-card);
+    --card-shadow: var(--light-shadow);
+    --text-color: var(--light-text);
+    --subtext-color: var(--light-sub-text);
+    --progress-bar: var(--light-progress);
+  }
+}
+
+:root[color-scheme='light'] {
+  --background: var(--light-bg);
+  --background-image: var(--light-bgi);
+  --background-image-md: var(--light-bgi-md);
+  --background-image-sm: var(--light-bgi-sm);
+  --background-card: var(--light-card);
+  --card-shadow: var(--light-shadow);
+  --text-color: var(--light-text);
+  --subtext-color: var(--light-sub-text);
+  --progress-bar: var(--light-progress);
+}
+
+:root[color-scheme='dark'] {
+  --background: var(--dark-bg);
+  --background-image: var(--dark-bgi);
+  --background-image-md: var(--dark-bgi-md);
+  --background-image-sm: var(--dark-bgi-sm);
+  --background-card: var(--dark-card);
+  --card-shadow: var(--dark-shadow);
+  --text-color: var(--dark-text);
+  --subtext-color: var(--dark-sub-text);
+  --progress-bar: var(--dark-progress);
+}
