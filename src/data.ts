@@ -89,7 +89,7 @@ export const Quizzes: Quiz[] = [
   {
     type: 'CSS',
     icon: 'css',
-    iconColor: '#E0FDEF"',
+    iconColor: '#E0FDEF',
     questions: [
       {
         question: 'What does CSS stand for?',
