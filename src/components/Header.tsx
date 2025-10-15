@@ -1,8 +1,12 @@
-import { Toggler } from '.';
+import { Toggler, CardIcon } from '.';
+import { useQuizStore } from '../store/quizStore';
 
 const Header = () => {
+  const topic = useQuizStore((state) => state.topic);
+  console.log(topic);
   return (
     <header className='header flex'>
+      {topic && <CardIcon icon='html' iconColor='#FFF1E9' />}
       <Toggler />
     </header>
   );

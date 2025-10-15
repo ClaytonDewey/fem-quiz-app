@@ -1,29 +1,28 @@
-import React, { MouseEvent, ReactNode } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { Icon } from '../svg';
 
-interface ButtonProps {
-  children: ReactNode;
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-  disabled?: boolean;
-  className?: string;
-  icon?: string;
-  iconPosition?: 'left' | 'right';
-}
-
-const Button: React.FC<ButtonProps> = ({
-  children,
-  onClick,
-  disabled = false,
-  className = '',
-  icon,
-  iconPosition = 'left',
-}) => {
-  return (
-    <button onClick={onClick} className={className} disabled={disabled}>
-      {icon && iconPosition === 'left' && <Icon name={icon} />}
-      {children}
-      {icon && iconPosition === 'right' && <Icon name={icon} />}
-    </button>
-  );
+type ButtonProps = {
+  choice: string | null;
+  setChoice: (value: string | null) => void;
+  ref: React.Ref<HTMLButtonElement>;
 };
+
+const Button: React.FC<ButtonProps> = forwardRef(
+  ({ choice, setChoice }, ref) => {
+    const [btnText, setBtnText] = useState('Submit Answer');
+    const [error, setError] = useState(false);
+
+    return (
+      <>
+        <button className='quiz__btn'>{btnText}</button>
+        {error ? (
+          <div className='msg msg--error'>
+            <Icon name='error' />
+            Please select an answer
+          </div>
+        ) : null}
+      </>
+    );
+  }
+);
 export default Button;

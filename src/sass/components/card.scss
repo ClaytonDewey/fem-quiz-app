@@ -70,16 +70,16 @@
   }
 
   &--selected {
-    border-color: var(--clr-primary);
+    border-color: var(--clr-purple-600);
 
     .card__icon {
-      background-color: var(--clr-primary);
+      background-color: var(--clr-purple-600);
       color: var(--clr-white);
     }
 
     &:hover {
       .card__icon {
-        background-color: var(--clr-primary) !important;
+        background-color: var(--clr-purple-600) !important;
         color: var(--clr-white) !important;
       }
     }
