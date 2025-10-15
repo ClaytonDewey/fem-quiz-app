@@ -1,5 +1,5 @@
 import { Card } from '../components';
-import data from '../data.json';
+import { Quizzes } from '../data';
 
 const HomePage = () => {
   return (
@@ -14,15 +14,15 @@ const HomePage = () => {
       </div>
       <div className='col__right'>
         <div className='card--container'>
-          {data.quizzes.map((quiz, index) => {
-            const { icon, iconColor, title } = quiz;
+          {Quizzes.map((quiz, index) => {
+            const { icon, iconColor, type } = quiz;
             return (
               <Card
-                key={title}
+                key={type}
                 index={index}
                 icon={icon}
                 iconColor={iconColor}
-                text={title}
+                text={type}
               />
             );
           })}
