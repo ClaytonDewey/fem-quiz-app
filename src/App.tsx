@@ -1,13 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useThemeStore } from './store/themeStore';
-import { Header } from './components';
+import { HomePage } from './pages';
+import Layout from './layout/Layout';
 
 function App() {
   const { theme } = useThemeStore();
   return (
     <div className='theme-wrapper' data-theme={theme}>
-      <div className='container flex'>
-        <Header />
-      </div>
+      <Router>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path='/' element={<HomePage />} />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
