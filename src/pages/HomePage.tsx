@@ -1,3 +1,5 @@
+import { Card } from '../components';
+
 const HomePage = () => {
   return (
     <>
@@ -10,7 +12,12 @@ const HomePage = () => {
         </p>
       </div>
       <div className='col__right'>
-        <div className='card--container'>{/*  */}</div>
+        <div className='card--container'>
+          <Card index={1} icon='html' text='HTML' />
+          <Card index={2} icon='css' text='CSS' />
+          <Card index={3} icon='js' text='JavaScript' />
+          <Card index={4} icon='a11y' text='Accessibility' />
+        </div>
       </div>
     </>
   );
