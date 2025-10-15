@@ -18,7 +18,7 @@ const Card: React.FC<CardProps> = ({ icon, iconColor, text, index }) => {
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const topic = event.currentTarget.getAttribute('data-topic');
-    console.log(topic);
+
     if (topic !== null) {
       updateTopic(topic);
       navigate('/quiz');
