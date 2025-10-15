@@ -119,6 +119,7 @@
 
   @include breakpoint(medium) {
     border-radius: rem(24);
+    border: 2px solid transparent;
     height: rem(80);
     gap: rem(32);
 
@@ -159,11 +160,12 @@
 
   &:hover {
     cursor: pointer;
+    border-color: var(--clr-purple-600);
 
     .card__icon {
-      color: var(--clr-primary);
+      color: var(--clr-white);
       transition: var(--transition);
-      background-color: var(--icon-bg);
+      background-color: var(--clr-purple-600);
     }
   }
 
