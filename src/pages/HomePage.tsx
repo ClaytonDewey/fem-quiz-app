@@ -1,4 +1,5 @@
 import { Card } from '../components';
+import data from '../data.json';
 
 const HomePage = () => {
   return (
@@ -13,10 +14,18 @@ const HomePage = () => {
       </div>
       <div className='col__right'>
         <div className='card--container'>
-          <Card index={1} icon='html' text='HTML' />
-          <Card index={2} icon='css' text='CSS' />
-          <Card index={3} icon='js' text='JavaScript' />
-          <Card index={4} icon='a11y' text='Accessibility' />
+          {data.quizzes.map((quiz, index) => {
+            const { icon, iconColor, title } = quiz;
+            return (
+              <Card
+                key={title}
+                index={index}
+                icon={icon}
+                iconColor={iconColor}
+                text={title}
+              />
+            );
+          })}
         </div>
       </div>
     </>

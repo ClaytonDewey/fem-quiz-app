@@ -1,19 +1,19 @@
 import React from 'react';
 import { makeLetter } from '../utils';
-import { Button } from '.';
-import { Icon } from '../svg';
+import { Button, CardIcon } from '.';
 
 type CardProps = {
   icon?: string;
+  iconColor: string;
   index: number;
   text: string;
 };
 
-const Card: React.FC<CardProps> = ({ icon, text, index }) => {
+const Card: React.FC<CardProps> = ({ icon, iconColor, text, index }) => {
   return (
     <Button className='card' onClick={() => console.log(text)}>
       {icon ? (
-        <Icon name={icon} />
+        <CardIcon icon={icon} iconColor={iconColor} />
       ) : (
         <div className='card__icon'>{makeLetter(index + 1)}</div>
       )}
