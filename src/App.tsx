@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useThemeStore } from './store/themeStore';
-import { HomePage } from './pages';
+import { HomePage, QuizPage, ResultsPage } from './pages';
 import Layout from './layout/Layout';
 
 function App() {
@@ -11,6 +11,8 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path='/' element={<HomePage />} />
+            <Route path='/quiz' element={<QuizPage />} />
+            <Route path='/results' element={<ResultsPage />} />
           </Route>
         </Routes>
       </Router>

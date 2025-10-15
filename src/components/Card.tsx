@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeLetter } from '../utils';
-import { Button, CardIcon } from '.';
+import { CardIcon } from '.';
+import { useQuizStore } from '../store/quizStore';
+import { useNavigate } from 'react-router-dom';
 
 type CardProps = {
   icon?: string;
@@ -10,15 +12,32 @@ type CardProps = {
 };
 
 const Card: React.FC<CardProps> = ({ icon, iconColor, text, index }) => {
+  const navigate = useNavigate();
+
+  const updateTopic = useQuizStore((state) => state.updateTopic);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const topic = event.currentTarget.getAttribute('data-topic');
+    console.log(topic);
+    if (topic !== null) {
+      updateTopic(topic);
+      navigate('/quiz');
+    }
+  };
+
   return (
-    <Button className='card' onClick={() => console.log(text)}>
+    <button
+      type='button'
+      data-topic={text}
+      className='card'
+      onClick={handleClick}>
       {icon ? (
         <CardIcon icon={icon} iconColor={iconColor} />
       ) : (
         <div className='card__icon'>{makeLetter(index + 1)}</div>
       )}
       <div className='card__text'>{text}</div>
-    </Button>
+    </button>
   );
 };
 export default Card;
