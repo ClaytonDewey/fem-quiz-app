@@ -2,62 +2,91 @@
 
 :root {
   // Colors
-  --clr-primary: #a729f5;
-  --clr-success: hsl(151, 70%, 50%);
-  --clr-fail: hsl(0, 82%, 63%);
-  --clr-grey-400: hsl(216, 25%, 25%);
-  --clr-grey-300: hsl(215, 27%, 32%);
-  --clr-grey-200: hsl(219, 13%, 44%);
-  --clr-grey-100: hsl(220, 38%, 97%);
-  --clr-light-blue: hsl(216, 47%, 78%);
   --clr-black: #000;
   --clr-white: #fff;
-  --card-icon-bg: var(--clr-grey-100);
-  --card-icon-text: var(--clr-grey-200);
-  --icon-bg: hsl(278, 100%, 95%);
-  --clr-hover: hsl(280, 84%, 77%);
+  --clr-grey-500: #626c7f;
+  --clr-grey-50: #f4f6fa;
 
-  // Color Schemes
-  --dark-bg: var(--clr-grey-400);
-  --dark-bgi: url(../../images/pattern-background-desktop-dark.svg);
-  --dark-bgi-md: url(../../images/pattern-background-tablet-dark.svg);
-  --dark-bgi-sm: url(../../images/pattern-background-mobile-dark.svg);
-  --dark-card: var(--clr-grey-300);
-  --dark-text: var(--clr-white);
-  --dark-sub-text: var(--clr-light-blue);
-  --dark-shadow: rgba(49, 62, 81, 0.14);
-  --dark-progress: var(--clr-grey-300);
+  --clr-blue-950: #2d3949;
+  --clr-blue-900: #313e51;
+  --clr-blue-850: #3b4d66;
+  --clr-blue-500: #306aff;
+  --clr-blue-300: #abc1e1;
+  --clr-blue-100: #edf1f9;
+  --clr-blue-50: #ebf0ff;
 
-  --light-bg: var(--clr-grey-100);
+  --clr-green-500: #2fd887;
+  --clr-green-100: #e0fdef;
+
+  --clr-purple-600: #a729f5;
+  --clr-purple-100: #fde7ff;
+
+  --clr-orange-400: #ff7e35;
+  --clr-orange-50: #fff5ed;
+
+  --clr-red-500: #ee5454;
+
+  // Typography
+  --fs-6xlg: #{rem(144)};
+  --fs-5xlg: #{rem(88)};
+  --fs-4xlg: #{rem(64)};
+  --fs-3xlg: #{rem(40)};
+  --fs-2xlg: #{rem(36)};
+  --fs-xlg: #{rem(28)};
+  --fs-lg: #{rem(24)};
+  --fs-med: #{rem(20)};
+  --fs-sm: #{rem(18)};
+  --fs-xsm: #{rem(14)};
+
+  --ff-sans: 'Rubik', Arial, Helvetica, sans-serif;
+
+  --fw-light: 300;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --text-preset-1: normal normal var(--fw-medium) var(--fs-5xlg) / 100%
+    var(--ff-primary);
+
+  --text-preset-2-md: normal normal var(--fw-medium) var(--fs-3xlg) / 100%
+    var(--ff-primary);
+  --text-preset-2: normal normal var(--fw-light) var(--fs-3xlg) / 100%
+    var(--ff-primary);
+
+  --text-preset-3: normal normal var(--fw-medium) var(--fs-med) / 120%
+    var(--ff-primary);
+
+  --text-preset-4: normal normal var(--fw-medium) var(--fs-sm) / 100%
+    var(--ff-primary);
+
+  --text-preset-5-md: italic normal var(--fw-medium) var(--fs-lg) / 150%
+    var(--ff-primary);
+  --text-preset-5: italic normal var(--fw-light) var(--fs-lg) / 150%
+    var(--ff-primary);
+
+  --text-preset-6: italic normal var(--fw-light) var(--fs-med) / 150%
+    var(--ff-primary);
+
+  // Themes
+  --light-bg: var(--clr-grey-50);
   --light-bgi: url(../../images/pattern-background-desktop-light.svg);
   --light-bgi-md: url(../../images/pattern-background-tablet-light.svg);
   --light-bgi-sm: url(../../images/pattern-background-mobile-light.svg);
   --light-card: var(--clr-white);
-  --light-text: var(--clr-grey-300);
-  --light-sub-text: var(--clr-grey-200);
+  --light-text: var(--clr-blue-900);
+  --light-sub-text: var(--clr-blue-500);
   --light-shadow: rgba(143, 160, 193, 0.14);
   --light-progress: var(--clr-white);
 
-  --background: var(--dark-bg);
-  --background-image: var(--dark-bgi);
-  --background-image-md: var(--dark-bgi-md);
-  --background-image-sm: var(--dark-bgi-sm);
-  --background-card: var(--dark-card);
-  --card-shadow: var(--dark-shadow);
-  --text-color: var(--dark-text);
-  --subtext-color: var(--dark-sub-text);
-  --progress-bar: var(--dark-progress);
-
-  // Font-family
-  --ff-sans: 'Rubik', Arial, Helvetica, sans-serif;
-  --ff-mono: 'Source Code Pro', monospace;
-  --ff-serif: Cambria, Cochin, Georgia, serif;
-
-  // Font-sizes
-  --fs-heading-lg: #{rem(64)};
-  --fs-heading-md: #{rem(36)};
-  --fs-heading-sm: #{rem(28)};
-  --fs-body: #{rem(12)};
+  --dark-bg: var(--clr-blue-900);
+  --dark-bgi: url(../../images/pattern-background-desktop-dark.svg);
+  --dark-bgi-md: url(../../images/pattern-background-tablet-dark.svg);
+  --dark-bgi-sm: url(../../images/pattern-background-mobile-dark.svg);
+  --dark-card: var(--clr-blue-850);
+  --dark-text: var(--clr-white);
+  --dark-sub-text: var(--clr-blue-300);
+  --dark-shadow: rgba(49, 62, 81, 0.14);
+  --dark-progress: var(--clr-blue-850);
 
   // Flexbox gap/columns
   --gap: #{rem(24)};

@@ -25,7 +25,7 @@
 
     .label {
       position: relative;
-      background-color: var(--clr-primary);
+      background-color: var(--clr-purple-600);
       border-radius: 50px;
       cursor: pointer;
       display: inline-block;
@@ -58,10 +58,6 @@
         animation: slideOff 0.3s linear forwards;
       }
     }
-  }
-
-  &.dark + .label {
-    background-color: var(--clr-primary);
   }
 
   &.dark + .label .ball {
