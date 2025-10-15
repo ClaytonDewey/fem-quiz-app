@@ -6,7 +6,10 @@ const Toggler = () => {
 
   return (
     <div className='toggler'>
-      {theme === 'dark' ? <Icon name='sun' /> : <Icon name='sun-dark' />}
+      <Icon
+        name={theme === 'dark' ? 'sun' : 'sun-dark'}
+        fallback={<p>...</p>}
+      />
       <div className='toggle__container'>
         <input
           type='checkbox'
@@ -18,7 +21,10 @@ const Toggler = () => {
           <div className='ball'></div>
         </label>
       </div>
-      {theme === 'light' ? <Icon name='moon-dark' /> : <Icon name='moon' />}
+      <Icon
+        name={theme === 'light' ? 'moon-dark' : 'moon'}
+        fallback={<p>...</p>}
+      />
     </div>
   );
 };
