@@ -2,7 +2,7 @@
   "quizzes": [
     {
       "title": "HTML",
-      "icon": "./images/icon-html.svg",
+      "icon": "html",
       "iconColor": "#FFF1E9",
       "questions": [
         {
@@ -84,7 +84,7 @@
     },
     {
       "title": "CSS",
-      "icon": "./images/icon-css.svg",
+      "icon": "css",
       "iconColor": "#E0FDEF",
       "questions": [
         {
@@ -161,7 +161,7 @@
     },
     {
       "title": "JavaScript",
-      "icon": "./images/icon-js.svg",
+      "icon": "js",
       "iconColor": "#EBF0FF",
       "questions": [
         {
@@ -258,7 +258,7 @@
     },
     {
       "title": "Accessibility",
-      "icon": "./images/icon-accessibility.svg",
+      "icon": "a11y",
       "iconColor": "#F6E7FF",
       "questions": [
         {
