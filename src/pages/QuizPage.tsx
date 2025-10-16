@@ -50,7 +50,7 @@ const QuizPage = () => {
             <p className='quiz__step'>
               Question {activeQuestionIndex + 1} of {questions.length}
             </p>
-            <p className='quiz__questions'>
+            <p className='quiz__question'>
               {questions[activeQuestionIndex].question}
             </p>
             <ProgressBar totalQuestions={questions.length} />
