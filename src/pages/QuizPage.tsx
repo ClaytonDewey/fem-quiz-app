@@ -57,10 +57,9 @@ const QuizPage = () => {
           </div>
           <div className='col__right'>
             <div className='card--container'>
-              <Choice />
-              <Choice />
-              <Choice />
-              <Choice />
+              {questions.map((question, index) => {
+                return <p key={index}>hi</p>;
+              })}
             </div>
             <button type='button' className='quiz__btn'>
               Submit Answer
