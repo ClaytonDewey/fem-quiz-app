@@ -3,7 +3,7 @@ import { Quiz } from './types/quiz';
 export const Quizzes: Quiz[] = [
   {
     title: 'HTML',
-    icon: './images/icon-html.svg',
+    icon: 'html',
     iconColor: '#FFF1E9',
     questions: [
       {
@@ -98,7 +98,7 @@ export const Quizzes: Quiz[] = [
   },
   {
     title: 'CSS',
-    icon: './images/icon-css.svg',
+    icon: 'css',
     iconColor: '#E0FDEF',
     questions: [
       {
@@ -187,7 +187,7 @@ export const Quizzes: Quiz[] = [
   },
   {
     title: 'JavaScript',
-    icon: './images/icon-js.svg',
+    icon: 'js',
     iconColor: '#EBF0FF',
     questions: [
       {
@@ -297,7 +297,7 @@ export const Quizzes: Quiz[] = [
   },
   {
     title: 'Accessibility',
-    icon: './images/icon-accessibility.svg',
+    icon: 'a11y',
     iconColor: '#F6E7FF',
     questions: [
       {
