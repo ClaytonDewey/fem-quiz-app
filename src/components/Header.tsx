@@ -21,7 +21,12 @@ const Header = () => {
 
   return (
     <header className='header flex'>
-      {topic !== '' && <CardIcon icon={iconImage} iconColor='#FFF1E9' />}
+      {topic !== '' && (
+        <>
+          <CardIcon icon={iconImage} iconColor='#FFF1E9' />
+          {topic}
+        </>
+      )}
       <Toggler />
     </header>
   );
