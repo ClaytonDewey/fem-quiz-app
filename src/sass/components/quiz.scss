@@ -4,17 +4,16 @@
   &__step {
     margin-bottom: rem(12);
     color: var(--subtext-color);
-    font-size: rem(14);
-    font-weight: 400;
-    font-style: italic;
+    font: var(--text-preset-6);
   }
 
   &__question {
     font-size: rem(20);
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: var(--fw-bold);
     line-height: 120%;
     margin-bottom: rem(24);
+    font: var(--text-preset-3);
   }
 
   &__btn {
@@ -45,7 +44,6 @@
   @include breakpoint(medium) {
     &__step {
       margin-bottom: rem(27);
-      font-size: rem(20);
     }
 
     &__question {
