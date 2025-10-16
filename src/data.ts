@@ -2,11 +2,12 @@ import { Quiz } from './types/quiz';
 
 export const Quizzes: Quiz[] = [
   {
-    type: 'HTML',
-    icon: 'html',
+    title: 'HTML',
+    icon: './images/icon-html.svg',
     iconColor: '#FFF1E9',
     questions: [
       {
+        id: 1,
         question: 'What does HTML stand for?',
         options: [
           'Hyper Trainer Marking Language',
@@ -14,9 +15,10 @@ export const Quizzes: Quiz[] = [
           'Hyper Text Markup Language',
           'Hyper Text Markup Leveler',
         ],
-        correct: 2,
+        answer: 'Hyper Text Markup Language',
       },
       {
+        id: 2,
         question:
           'Which of the following is the correct structure for an HTML document?',
         options: [
@@ -25,15 +27,17 @@ export const Quizzes: Quiz[] = [
           '<body><head></head><html></html></body>',
           '<html><body></body><head></head></html>',
         ],
-        correct: 0,
+        answer: '<html><head></head><body></body></html>',
       },
       {
+        id: 3,
         question:
           'Which HTML element is used to define the title of a document?',
         options: ['<head>', '<title>', '<header>', '<top>'],
-        correct: 1,
+        answer: '<title>',
       },
       {
+        id: 4,
         question: 'What is the purpose of the <body> tag in HTML?',
         options: [
           "It defines the document's head section.",
@@ -41,30 +45,35 @@ export const Quizzes: Quiz[] = [
           'It is used to define the main content of an HTML document.',
           'It specifies the body of the email content in HTML.',
         ],
-        correct: 1,
+        answer: 'It contains all the content such as text, images, and links.',
       },
       {
+        id: 5,
         question: 'Which HTML tag is used to create a hyperlink?',
         options: ['<hyperlink>', '<link>', '<a>', '<href>'],
-        correct: 2,
+        answer: '<a>',
       },
       {
+        id: 6,
         question: 'Which tag is used to display images in HTML?',
         options: ['<img>', '<image>', '<src>', '<pic>'],
-        correct: 0,
+        answer: '<img>',
       },
       {
+        id: 7,
         question:
           'What attribute is used to provide the path of an image in the <img> tag?',
         options: ['link', 'src', 'href', 'url'],
-        correct: 1,
+        answer: 'src',
       },
       {
+        id: 8,
         question: 'Which HTML tag is used to create an unordered list?',
         options: ['<ul>', '<ol>', '<list>', '<li>'],
-        correct: 0,
+        answer: '<ul>',
       },
       {
+        id: 9,
         question: 'What does the <br> tag do?',
         options: [
           'It breaks the text into two sections.',
@@ -72,9 +81,10 @@ export const Quizzes: Quiz[] = [
           'It inserts a line break.',
           'It adds a new row in a table.',
         ],
-        correct: 2,
+        answer: 'It inserts a line break.',
       },
       {
+        id: 10,
         question: 'In HTML, what does the `fieldset` tag do?',
         options: [
           'It is used to group related data in a form.',
@@ -82,16 +92,17 @@ export const Quizzes: Quiz[] = [
           'It automatically validates the fields within a form.',
           'It hides the fields in a form.',
         ],
-        correct: 0,
+        answer: 'It is used to group related data in a form.',
       },
     ],
   },
   {
-    type: 'CSS',
-    icon: 'css',
+    title: 'CSS',
+    icon: './images/icon-css.svg',
     iconColor: '#E0FDEF',
     questions: [
       {
+        id: 1,
         question: 'What does CSS stand for?',
         options: [
           'Colorful Style Sheets',
@@ -99,14 +110,16 @@ export const Quizzes: Quiz[] = [
           'Cascading Style Sheets',
           'Creative Style Sheets',
         ],
-        correct: 2,
+        answer: 'Cascading Style Sheets',
       },
       {
+        id: 2,
         question: 'Which HTML attribute is used to define inline styles?',
         options: ['styles', 'style', 'class', 'font-style'],
-        correct: 1,
+        answer: 'style',
       },
       {
+        id: 3,
         question: 'How do you insert a comment in a CSS file?',
         options: [
           '// this is a comment //',
@@ -114,25 +127,29 @@ export const Quizzes: Quiz[] = [
           '-- this is a comment --',
           '<!-- this is a comment -->',
         ],
-        correct: 1,
+        answer: '/* this is a comment */',
       },
       {
+        id: 4,
         question:
           'Which property is used to change the background color of an element?',
         options: ['color', 'bgcolor', 'background-color', 'background'],
-        correct: 2,
+        answer: 'background-color',
       },
       {
+        id: 5,
         question: 'How do you apply a style to all <p> elements?',
         options: ['p { }', '.p { }', '#p { }', 'all.p { }'],
-        correct: 0,
+        answer: 'p { }',
       },
       {
+        id: 6,
         question: 'Which property is used to change the font of an element?',
         options: ['font-style', 'text-style', 'font-family', 'typeface'],
-        correct: 2,
+        answer: 'font-family',
       },
       {
+        id: 7,
         question:
           'How do you make each word in a text start with a capital letter?',
         options: [
@@ -141,19 +158,22 @@ export const Quizzes: Quiz[] = [
           'text-style: capital',
           'font-transform: capitalize',
         ],
-        correct: 0,
+        answer: 'text-transform: capitalize',
       },
       {
+        id: 8,
         question: "How do you select an element with the class name 'header'?",
         options: ['.header', '#header', 'header', '*header'],
-        correct: 0,
+        answer: '.header',
       },
       {
+        id: 9,
         question: "What is the default value of the 'position' property?",
         options: ['relative', 'fixed', 'absolute', 'static'],
-        correct: 3,
+        answer: 'static',
       },
       {
+        id: 10,
         question: 'What is the purpose of the z-index property in CSS?',
         options: [
           'To count the number of elements',
@@ -161,16 +181,17 @@ export const Quizzes: Quiz[] = [
           'To specify the stack order of an element',
           'To create a zoom effect',
         ],
-        correct: 2,
+        answer: 'To specify the stack order of an element',
       },
     ],
   },
   {
-    type: 'JavaScript',
-    icon: 'js',
+    title: 'JavaScript',
+    icon: './images/icon-js.svg',
     iconColor: '#EBF0FF',
     questions: [
       {
+        id: 1,
         question:
           "Which syntax is correct to output 'Hello World' in an alert box?",
         options: [
@@ -179,9 +200,10 @@ export const Quizzes: Quiz[] = [
           "alert('Hello World');",
           "msgBox('Hello World');",
         ],
-        correct: 2,
+        answer: "alert('Hello World');",
       },
       {
+        id: 2,
         question: "How do you call a function named 'myFunction'?",
         options: [
           'call function myFunction()',
@@ -189,14 +211,16 @@ export const Quizzes: Quiz[] = [
           'myFunction()',
           'execute myFunction()',
         ],
-        correct: 2,
+        answer: 'myFunction()',
       },
       {
+        id: 3,
         question: 'How to write an IF statement in JavaScript?',
         options: ['if i = 5 then', 'if (i == 5)', 'if i == 5', 'if i = 5'],
-        correct: 1,
+        answer: 'if (i == 5)',
       },
       {
+        id: 4,
         question:
           "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
         options: [
@@ -205,9 +229,10 @@ export const Quizzes: Quiz[] = [
           'if (i != 5)',
           'if i not = 5',
         ],
-        correct: 2,
+        answer: 'if (i != 5)',
       },
       {
+        id: 5,
         question: 'How does a FOR loop start?',
         options: [
           'for (i = 0; i <= 5)',
@@ -215,9 +240,10 @@ export const Quizzes: Quiz[] = [
           'for (i <= 5; i++)',
           'for (i = 0; i <= 5; i++)',
         ],
-        correct: 3,
+        answer: 'for (i = 0; i <= 5; i++)',
       },
       {
+        id: 6,
         question: 'How can you add a single-line comment in JavaScript?',
         options: [
           "'This is a single-line comment",
@@ -225,9 +251,10 @@ export const Quizzes: Quiz[] = [
           '<!--This is a single-line comment-->',
           '/* This is a single-line comment */',
         ],
-        correct: 1,
+        answer: '//This is a single-line comment',
       },
       {
+        id: 7,
         question: 'What is the correct way to write a JavaScript array?',
         options: [
           "var colors = (1:'red', 2:'green', 3:'blue')",
@@ -235,9 +262,10 @@ export const Quizzes: Quiz[] = [
           "var colors = 'red', 'green', 'blue'",
           "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')",
         ],
-        correct: 1,
+        answer: "var colors = ['red', 'green', 'blue']",
       },
       {
+        id: 8,
         question:
           'How do you find the number with the highest value of x and y?',
         options: [
@@ -246,14 +274,16 @@ export const Quizzes: Quiz[] = [
           'Math.max(x, y)',
           'Math.highest(x, y)',
         ],
-        correct: 2,
+        answer: 'Math.max(x, y)',
       },
       {
+        id: 9,
         question: 'Which operator is used to assign a value to a variable?',
         options: ['-', '*', '=', 'x'],
-        correct: 2,
+        answer: '=',
       },
       {
+        id: 10,
         question: 'What is the correct way to write a JavaScript object?',
         options: [
           "var person = {firstName: 'John', lastName: 'Doe'};",
@@ -261,16 +291,17 @@ export const Quizzes: Quiz[] = [
           "var person = (firstName: 'John', lastName: 'Doe');",
           "var person = (firstName = 'John', lastName = 'Doe');",
         ],
-        correct: 0,
+        answer: "var person = {firstName: 'John', lastName: 'Doe'};",
       },
     ],
   },
   {
-    type: 'Accessibility',
-    icon: 'a11y',
+    title: 'Accessibility',
+    icon: './images/icon-accessibility.svg',
     iconColor: '#F6E7FF',
     questions: [
       {
+        id: 1,
         question: "What does 'WCAG' stand for?",
         options: [
           'Web Content Accessibility Guidelines',
@@ -278,9 +309,10 @@ export const Quizzes: Quiz[] = [
           'Web Content Accessibility Goals',
           'Website Compliance and Accessibility Guidelines',
         ],
-        correct: 0,
+        answer: 'Web Content Accessibility Guidelines',
       },
       {
+        id: 2,
         question:
           'Which element is used to provide alternative text for images for screen reader users?',
         options: [
@@ -289,9 +321,10 @@ export const Quizzes: Quiz[] = [
           '<description>',
           "<img alt='description'>",
         ],
-        correct: 3,
+        answer: "<img alt='description'>",
       },
       {
+        id: 3,
         question: 'What does ARIA stand for in web development?',
         options: [
           'Accessible Rich Internet Applications',
@@ -299,26 +332,30 @@ export const Quizzes: Quiz[] = [
           'Accessible Responsive Internet Applications',
           'Automated Responsive Internet Actions',
         ],
-        correct: 1,
+        answer: 'Accessible Rich Internet Applications',
       },
       {
+        id: 4,
         question: 'Which of the following is not a principle of the WCAG?',
         options: ['Perceivable', 'Dependable', 'Operable', 'Understandable'],
-        correct: 1,
+        answer: 'Dependable',
       },
       {
+        id: 5,
         question:
           'Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?',
         options: ['3:1', '4.5:1', '7:1', '2:1'],
-        correct: 1,
+        answer: '4.5:1',
       },
       {
+        id: 6,
         question:
           "Which of the following elements is inherently focusable, meaning it can receive focus without a 'tabindex' attribute?",
         options: ['<div>', '<span>', "<a href='...'>", '<p>'],
-        correct: 2,
+        answer: "<a href='...'>",
       },
       {
+        id: 7,
         question:
           "What is the purpose of the 'lang' attribute in an HTML page?",
         options: [
@@ -327,9 +364,10 @@ export const Quizzes: Quiz[] = [
           'To indicate the language of the page content',
           'To declare a language pack',
         ],
-        correct: 2,
+        answer: 'To indicate the language of the page content',
       },
       {
+        id: 8,
         question:
           'Which guideline ensures that content is accessible by keyboard as well as by mouse?',
         options: [
@@ -338,9 +376,10 @@ export const Quizzes: Quiz[] = [
           'Device Independence',
           'Operable Controls',
         ],
-        correct: 0,
+        answer: 'Keyboard Accessible',
       },
       {
+        id: 9,
         question:
           "What is the role of 'skip navigation' links in web accessibility?",
         options: [
@@ -349,9 +388,10 @@ export const Quizzes: Quiz[] = [
           'To help users skip unwanted sections like advertisements',
           'To bypass broken links in the navigation',
         ],
-        correct: 0,
+        answer: 'To skip over primary navigation to the main content',
       },
       {
+        id: 10,
         question:
           'Which of these tools can help in checking the accessibility of a website?',
         options: [
@@ -360,7 +400,7 @@ export const Quizzes: Quiz[] = [
           'CSS Validator',
           'JavaScript Console',
         ],
-        correct: 1,
+        answer: 'Google Lighthouse',
       },
     ],
   },

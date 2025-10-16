@@ -15,14 +15,14 @@ const HomePage = () => {
       <div className='col__right'>
         <div className='card--container'>
           {Quizzes.map((quiz, index) => {
-            const { icon, iconColor, type } = quiz;
+            const { icon, iconColor, title } = quiz;
             return (
               <Card
-                key={type}
+                key={title}
                 index={index}
                 icon={icon}
                 iconColor={iconColor}
-                text={type}
+                text={title}
               />
             );
           })}
