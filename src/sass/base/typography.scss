@@ -6,21 +6,21 @@ h1 {
   font-weight: 500;
   line-height: 100%;
   margin: 0;
-  font-size: rem(40);
-  margin-bottom: rem(16);
+  font-size: var(--sp-40);
+  margin-bottom: var(--sp-16);
 
   @include breakpoint(medium) {
-    font-size: rem(64);
+    font-size: var(--sp-64);
   }
 
   @include breakpoint(large) {
-    margin-bottom: rem(48);
+    margin-bottom: var(--sp-48);
   }
 
   span {
     display: block;
     font-weight: 300;
-    margin-bottom: rem(8);
+    margin-bottom: var(--sp-8);
   }
 }
 

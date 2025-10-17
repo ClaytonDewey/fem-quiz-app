@@ -7,7 +7,7 @@
     flex-direction: column;
     background-color: var(--progress-bar);
     border-radius: rem(50);
-    height: rem(16);
+    height: var(--sp-16);
     padding: rem(4);
     width: 100%;
   }
@@ -16,6 +16,6 @@
     display: block;
     background-color: var(--clr-purple-600);
     border-radius: rem(50);
-    height: rem(8);
+    height: var(--sp-8);
   }
 }

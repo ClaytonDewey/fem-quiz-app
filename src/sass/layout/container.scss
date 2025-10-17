@@ -2,12 +2,12 @@
 
 .container {
   margin: 0 auto;
-  padding: rem(32) rem(24);
+  padding: var(--sp-32) var(--sp-24);
   width: 100%;
 
   @include breakpoint(medium) {
     max-width: rem(1160);
-    padding: 0 rem(64) rem(64);
+    padding: 0 var(--sp-64) var(--sp-64);
   }
 
   @include breakpoint(large) {
@@ -17,7 +17,7 @@
 
 .col {
   &__left {
-    margin-bottom: rem(40);
+    margin-bottom: var(--sp-40);
     width: 100%;
   }
 
@@ -27,7 +27,7 @@
 
   @include breakpoint(medium) {
     &__left {
-      margin-bottom: rem(64);
+      margin-bottom: var(--sp-64);
     }
   }
 

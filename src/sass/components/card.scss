@@ -10,7 +10,7 @@
       margin-bottom: rem(12);
 
       @include breakpoint(medium) {
-        margin-bottom: rem(24);
+        margin-bottom: var(--sp-24);
       }
     }
   }
@@ -18,11 +18,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  gap: rem(16);
+  gap: var(--sp-16);
   width: 100%;
   margin: 0;
   padding: rem(9);
-  height: rem(64);
+  height: var(--sp-64);
   background-color: var(--background-card);
   color: var(--text-color);
   border: 3px solid transparent;
@@ -41,8 +41,8 @@
     font-size: rem(18);
     font-weight: 500;
     text-transform: capitalize;
-    height: rem(40);
-    width: rem(40);
+    height: var(--sp-40);
+    width: var(--sp-40);
     border-radius: rem(6);
 
     img {
@@ -52,14 +52,14 @@
     }
 
     &--success {
-      height: rem(32);
-      width: rem(32);
+      height: var(--sp-32);
+      width: var(--sp-32);
       margin-left: auto;
     }
 
     &--fail {
-      height: rem(32);
-      width: rem(32);
+      height: var(--sp-32);
+      width: var(--sp-32);
       margin-left: auto;
     }
   }
@@ -118,10 +118,10 @@
   }
 
   @include breakpoint(medium) {
-    border-radius: rem(24);
+    border-radius: var(--sp-24);
     border: 2px solid transparent;
     height: rem(80);
-    gap: rem(32);
+    gap: var(--sp-32);
 
     &__icon {
       height: rem(56);
@@ -130,19 +130,19 @@
       font-size: rem(28);
 
       img {
-        height: rem(40);
-        width: rem(40);
+        height: var(--sp-40);
+        width: var(--sp-40);
       }
 
       &--success {
-        height: rem(40);
-        width: rem(40);
+        height: var(--sp-40);
+        width: var(--sp-40);
         margin-left: auto;
       }
 
       &--fail {
-        height: rem(40);
-        width: rem(40);
+        height: var(--sp-40);
+        width: var(--sp-40);
         margin-left: auto;
       }
     }
@@ -171,8 +171,8 @@
 
   &__results {
     height: auto;
-    padding: rem(32);
-    gap: rem(16);
+    padding: var(--sp-32);
+    gap: var(--sp-16);
     flex-direction: column;
 
     &--header {
@@ -180,7 +180,7 @@
       align-items: center;
       font-weight: 500;
       font-size: rem(18);
-      gap: rem(16);
+      gap: var(--sp-16);
 
       .card__icon {
         background-color: #f6e7ff;
@@ -193,7 +193,7 @@
         font-weight: 500;
         font-size: rem(88);
         line-height: 100%;
-        margin-bottom: rem(16);
+        margin-bottom: var(--sp-16);
       }
 
       p {
@@ -204,20 +204,20 @@
     }
 
     @include breakpoint(medium) {
-      padding: rem(48);
-      gap: rem(64);
+      padding: var(--sp-48);
+      gap: var(--sp-64);
 
       &--header {
         font-size: rem(28);
-        gap: rem(24);
+        gap: var(--sp-24);
       }
 
       h2 {
-        font-size: rem(144);
+        font-size: var(--sp-144);
       }
 
       p {
-        font-size: rem(24);
+        font-size: var(--sp-24);
       }
     }
   }

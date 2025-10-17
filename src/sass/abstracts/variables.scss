@@ -70,6 +70,18 @@
   --text-preset-6: italic normal var(--fw-light) var(--fs-med) / 150%
     var(--ff-primary);
 
+  // Spacing
+  --sp-8: #{rem(8)};
+  --sp-16: #{rem(16)};
+  --sp-24: #{rem(24)};
+  --sp-32: #{rem(32)};
+  --sp-40: #{rem(40)};
+  --sp-48: #{rem(48)};
+  --sp-64: #{rem(64)};
+  --sp-128: #{rem(128)};
+  --sp-144: #{rem(144)};
+  --sp-184: #{rem(184)};
+
   // Themes
   --light-bg: var(--clr-grey-50);
   --light-bgi: url(../../images/pattern-background-desktop-light.svg);
