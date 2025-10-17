@@ -39,6 +39,15 @@
     &:hover {
       opacity: 0.6;
     }
+
+    &:disabled {
+      background-color: var(--clr-purple-500);
+      cursor: not-allowed;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   @include breakpoint(medium) {
