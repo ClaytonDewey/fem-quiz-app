@@ -1,50 +1,42 @@
-import React, { useEffect, useRef, useState } from 'react';
 import { makeLetter } from '../utils';
-import { Button } from '.';
+import { Choice } from '.';
+import { useRef, useState } from 'react';
 
 type ChoicesProps = {
-  options: string[];
-  answer: string;
+  answers: string[];
+  correctAnswer: string;
 };
 
-const Choices: React.FC<ChoicesProps> = ({ options, answer }) => {
-  const [choice, setChoice] = useState<string | null>('');
-  const choiceRef = useRef<HTMLButtonElement | null>(null);
+const Choices: React.FC<ChoicesProps> = ({ answers, correctAnswer }) => {
+  const [isDisabled, setIsDisabled] = useState(true);
+  const answerRef = useRef<HTMLButtonElement | null>(null);
 
   const handleClick = (e: any) => {
-    const selectedChoice = e.currentTarget.getAttribute('data-choice');
-    choiceRef.current = e.target;
-    setChoice(selectedChoice);
+    const selectedAnswer = e.currentTarget.getAttribute('data-choice');
+    answerRef.current = e.target;
+    console.log(selectedAnswer === correctAnswer);
+    setIsDisabled(false);
   };
-
-  useEffect(() => {
-    const allChoices = document.querySelectorAll('.card');
-
-    allChoices.forEach((currentChoice) => {
-      currentChoice.classList.add('card__active');
-    });
-  }, [choice]);
 
   return (
     <>
       <div className='card--container'>
-        {options.map((option, index) => {
+        {answers.map((answer, index) => {
           const letter = makeLetter(index + 1);
           return (
-            <button
-              onClick={handleClick}
-              className='card'
-              type='button'
-              data-choice={letter}
-              data-correct={option === answer}
-              key={index}>
-              <div className='card__icon'>{letter}</div>
-              <div className='card__text'>{option}</div>
-            </button>
+            <Choice
+              handleClick={handleClick}
+              letter={letter}
+              answer={answer}
+              correctAnswer={correctAnswer}
+              key={index}
+            />
           );
         })}
       </div>
-      <Button choice={choice} setChoice={setChoice} ref={choiceRef} />
+      <button type='button' className='quiz__btn' disabled={isDisabled}>
+        Submit Answer
+      </button>
     </>
   );
 };

@@ -1,17 +1,28 @@
-import { makeLetter } from '../utils';
+import CardIcon from './CardIcon';
 
 type ChoiceProps = {
-  question: string;
-  index: number;
+  handleClick: (e: any) => void;
+  letter: string;
+  answer: string;
+  correctAnswer: string;
 };
 
-const Choice: React.FC<ChoiceProps> = ({ question, index }) => {
-  const letter = makeLetter(index + 1);
-
+const Choice: React.FC<ChoiceProps> = ({
+  handleClick,
+  letter,
+  answer,
+  correctAnswer,
+}) => {
   return (
-    <button className='card'>
+    <button
+      data-choice={answer}
+      data-correct={answer === correctAnswer}
+      type='button'
+      className='card'
+      onClick={handleClick}>
       <div className='card__icon'>{letter}</div>
-      <div className='card__text'>{question}</div>
+      <div className='card__text'>{answer}</div>
+      <CardIcon icon='error' iconColor='transparent' />
     </button>
   );
 };

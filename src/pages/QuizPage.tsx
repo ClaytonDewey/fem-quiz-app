@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Quizzes } from '../data';
 import { useQuizStore } from '../store/quizStore';
 import { useEffect, useState } from 'react';
-import { Choice, ProgressBar } from '../components';
+import { Choice, Choices, ProgressBar } from '../components';
 import { Question } from '../types/quiz';
 
 // interface CurrentQuiz {
@@ -56,14 +56,10 @@ const QuizPage = () => {
             <ProgressBar totalQuestions={questions.length} />
           </div>
           <div className='col__right'>
-            <div className='card--container'>
-              {questions.map((question, index) => {
-                return <p key={index}>hi</p>;
-              })}
-            </div>
-            <button type='button' className='quiz__btn'>
-              Submit Answer
-            </button>
+            <Choices
+              answers={activeQuestion.options}
+              correctAnswer={activeQuestion.answer}
+            />
           </div>
         </>
       )}
