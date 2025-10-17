@@ -2,22 +2,22 @@
 
 .card {
   &--container {
-    display: flex;
-    flex-wrap: wrap;
+    @include flexbox;
+    @include flex-wrap(wrap);
+
     width: 100%;
+    gap: var(--sp-12);
 
-    .card:not(:last-child) {
-      margin-bottom: rem(12);
-
-      @include breakpoint(medium) {
-        margin-bottom: var(--sp-24);
-      }
+    @include breakpoint(medium) {
+      gap: var(--sp-24);
+      @include justify-content(space-between);
     }
   }
 
-  display: flex;
-  align-items: center;
-  position: relative;
+  @include flexbox;
+  @include justify-content(space-between);
+  @include align-items(center);
+
   gap: var(--sp-16);
   width: 100%;
   margin: 0;
@@ -57,7 +57,7 @@
       margin-left: auto;
     }
 
-    &--fail {
+    &--error {
       height: var(--sp-32);
       width: var(--sp-32);
       margin-left: auto;
@@ -79,39 +79,39 @@
 
     &:hover {
       .card__icon {
-        background-color: var(--clr-purple-600) !important;
-        color: var(--clr-white) !important;
+        background-color: var(--clr-purple-600);
+        color: var(--clr-white);
       }
     }
   }
 
   &--success {
-    border-color: var(--clr-success);
+    border-color: var(--clr-green-500);
 
     .card__icon {
-      background-color: var(--clr-success);
+      background-color: var(--clr-green-500);
       color: var(--clr-white);
     }
 
     &:hover {
       .card__icon {
-        background-color: var(--clr-success) !important;
-        color: var(--clr-white) !important;
+        background-color: var(--clr-green-500);
+        color: var(--clr-white);
       }
     }
   }
 
-  &--fail {
-    border-color: var(--clr-fail);
+  &--error {
+    border-color: var(--clr-red-500);
 
     .card__icon {
-      background-color: var(--clr-fail) !important;
-      color: var(--clr-white) !important;
+      background-color: var(--clr-red-500);
+      color: var(--clr-white);
     }
 
     &:hover {
       .card__icon {
-        background-color: var(--clr-fail);
+        background-color: var(--clr-red-500);
         color: var(--clr-white);
       }
     }
@@ -119,7 +119,6 @@
 
   @include breakpoint(medium) {
     border-radius: var(--sp-24);
-    border: 2px solid transparent;
     height: rem(80);
     gap: var(--sp-32);
 
@@ -140,7 +139,7 @@
         margin-left: auto;
       }
 
-      &--fail {
+      &--error {
         height: var(--sp-40);
         width: var(--sp-40);
         margin-left: auto;
